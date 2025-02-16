@@ -1,0 +1,290 @@
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    color: white;
+    padding: 5rem 0;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 0 0 3rem 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+/* Kartlar */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #0d6efd;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* İstatistik Kartları */
+.stats-list {
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background-color: #f8f9fa;
+}
+
+.stat-item i {
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+.stat-item span {
+    font-size: 0.95rem;
+}
+
+/* Listeler */
+.list-group-item {
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.list-unstyled li {
+    padding: 0.5rem 0;
+}
+
+/* Section Başlıkları */
+.section {
+    padding: 4rem 0;
+}
+
+.section h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.section .lead {
+    color: #6c757d;
+    margin-bottom: 3rem;
+}
+
+/* Butonlar */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.btn-outline-primary {
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #343a40 100%);
+}
+
+footer a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #0dcaf0 !important;
+    text-decoration: none;
+}
+
+/* Form Stilleri */
+.form-control, .form-select {
+    border: 2px solid #dee2e6;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0dcaf0 !important;
+}
+
+/* İkonlar */
+.fa-3x {
+    margin-bottom: 1rem;
+}
+
+/* Özel Efektler */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.rounded {
+    border-radius: 1rem !important;
+}
+
+.shadow {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+
+    .stat-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Ülke Kartları */
+.country-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.country-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 202, 240, 0.1) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.country-card:hover::before {
+    opacity: 1;
+}
+
+/* İstatistik Sayıları */
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} 

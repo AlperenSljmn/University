@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Robot Head -->
+    <g class="robot-head">
+        <rect x="120" y="80" width="160" height="120" rx="20" fill="#0d6efd"/>
+        <circle cx="160" cy="130" r="20" fill="white"/> <!-- Left Eye -->
+        <circle cx="240" cy="130" r="20" fill="white"/> <!-- Right Eye -->
+        <circle cx="160" cy="130" r="10" fill="#333"/> <!-- Left Pupil -->
+        <circle cx="240" cy="130" r="10" fill="#333"/> <!-- Right Pupil -->
+        <!-- Antenna -->
+        <rect x="190" y="50" width="20" height="30" fill="#0d6efd"/>
+        <circle cx="200" cy="40" r="10" fill="#0dcaf0"/>
+    </g>
+    
+    <!-- Robot Body -->
+    <g class="robot-body">
+        <rect x="100" y="200" width="200" height="140" rx="20" fill="#0d6efd"/>
+        <!-- Control Panel -->
+        <rect x="140" y="220" width="120" height="80" rx="10" fill="white"/>
+        <circle cx="170" cy="250" r="10" fill="#0dcaf0"/>
+        <circle cx="200" cy="250" r="10" fill="#0dcaf0"/>
+        <circle cx="230" cy="250" r="10" fill="#0dcaf0"/>
+        <rect x="160" y="270" width="80" height="20" rx="5" fill="#0dcaf0"/>
+    </g>
+    
+    <!-- Robot Arms -->
+    <g class="robot-arms">
+        <!-- Left Arm -->
+        <rect x="60" y="220" width="40" height="100" rx="20" fill="#0d6efd"/>
+        <circle cx="80" cy="320" r="20" fill="#0dcaf0"/>
+        <!-- Right Arm -->
+        <rect x="300" y="220" width="40" height="100" rx="20" fill="#0d6efd"/>
+        <circle cx="320" cy="320" r="20" fill="#0dcaf0"/>
+    </g>
+    
+    <!-- Robot Legs -->
+    <g class="robot-legs">
+        <!-- Left Leg -->
+        <rect x="120" y="340" width="40" height="60" rx="20" fill="#0d6efd"/>
+        <!-- Right Leg -->
+        <rect x="240" y="340" width="40" height="60" rx="20" fill="#0d6efd"/>
+    </g>
+    
+    <!-- Animation Elements -->
+    <style>
+        @keyframes blink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.1); }
+        }
+        
+        @keyframes hover {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: brightness(100%); }
+            50% { filter: brightness(120%); }
+        }
+        
+        .robot-head, .robot-body, .robot-arms, .robot-legs {
+            animation: hover 3s ease-in-out infinite;
+        }
+        
+        circle[fill="#333"] {
+            animation: blink 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+        
+        circle[fill="#0dcaf0"], rect[fill="#0dcaf0"] {
+            animation: glow 2s ease-in-out infinite;
+        }
+    </style>
+</svg> 

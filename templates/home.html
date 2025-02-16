@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block title %}Draft Eğitim - Ana Sayfa{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 bg-light mb-5">
+    <h1 class="display-4">Yurtdışı Eğitim Danışmanlığı</h1>
+    <p class="lead">10 Yıllık Tecrübe ile siz değerli öğrencilere hizmet vermenin haklı gururunu yaşıyoruz</p>
+    <div class="mt-4">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-2">Hemen Başvur</a>
+        <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">Programları İncele</a>
+    </div>
+</div>
+
+<!-- Ülke İstatistikleri -->
+<div class="section mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Ülkelere Göre Eğitim İmkanları</h2>
+        <div class="row">
+            {% for country in countries %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ country.name }}</h5>
+                        <div class="stats-list">
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-university text-primary"></i>
+                                <span class="ms-2">{{ country.university_count }} Üniversite</span>
+                            </div>
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-language text-primary"></i>
+                                <span class="ms-2">{{ country.language_school_count }} Dil Okulu</span>
+                            </div>
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-money-bill-wave text-primary"></i>
+                                <span class="ms-2">Yıllık Eğitim: {{ country.min_tuition_fee }}€'dan başlayan</span>
+                            </div>
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-home text-primary"></i>
+                                <span class="ms-2">Aylık Yaşam: {{ country.min_living_cost }}€'dan başlayan</span>
+                            </div>
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-check-circle text-primary"></i>
+                                <span class="ms-2">Vize Başarı: %{{ country.visa_success_rate }}</span>
+                            </div>
+                            {% if country.work_permit %}
+                            <div class="stat-item mb-3">
+                                <i class="fas fa-briefcase text-success"></i>
+                                <span class="ms-2">Çalışma İzni Var</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <a href="#" class="btn btn-outline-primary mt-3">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Dil Okulları Section -->
+<div class="section mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Dil Okulları</h2>
+        <p class="text-center lead mb-5">Draft Eğitim Danışmanlığı İle 10 Ülke ve 44 dil okulunda eğitim alabilirsiniz.</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Popüler Ülkeler</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">🇬🇧 İngiltere Dil Okulları</li>
+                            <li class="mb-2">🇩🇪 Almanya Dil Okulları</li>
+                            <li class="mb-2">🇮🇹 İtalya Dil Okulları</li>
+                            <li class="mb-2">🇲🇹 Malta Dil Okulları</li>
+                            <li class="mb-2">🇨🇦 Kanada Dil Okulları</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Popüler Diller</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h6>🇬🇧 İngilizce</h6>
+                                <p class="small text-muted">Genel İngilizce, İş İngilizcesi, Akademik İngilizce</p>
+                            </li>
+                            <li class="mb-3">
+                                <h6>🇩🇪 Almanca</h6>
+                                <p class="small text-muted">A1'den C2'ye kadar tüm seviyeler</p>
+                            </li>
+                            <li class="mb-3">
+                                <h6>🇫🇷 Fransızca</h6>
+                                <p class="small text-muted">Temel seviyeden ileri seviyeye</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Özel Programlar</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h6>🎯 Pathway Programı</h6>
+                                <p class="small text-muted">A1 Seviyesinden başlayan özel program</p>
+                            </li>
+                            <li class="mb-3">
+                                <h6>💼 Work and Study</h6>
+                                <p class="small text-muted">Çalışarak dil öğrenme fırsatı</p>
+                            </li>
+                            <li class="mb-3">
+                                <h6>🌞 Yaz Okulu</h6>
+                                <p class="small text-muted">Tatil yaparak dil öğrenme</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Yurtdışı Eğitim Section -->
+<div class="section bg-light py-5 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Yurtdışı Eğitim</h2>
+        <p class="text-center lead mb-5">Draft Eğitim Danışmanlığı İle 28 Ülke ve 205 okulda eğitim alabilirsiniz.</p>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Üniversite Eğitimi</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">📚 Ön Lisans</li>
+                            <li class="mb-2">🎓 Lisans</li>
+                            <li class="mb-2">🎯 Yüksek Lisans</li>
+                            <li class="mb-2">💼 MBA</li>
+                            <li class="mb-2">🔬 Doktora</li>
+                            <li class="mb-2">↗️ Dikey Geçiş</li>
+                            <li class="mb-2">↔️ Yatay Geçiş</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Özel Programlar</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">🌍 Yurtdışı Türkçe Eğitim</li>
+                            <li class="mb-2">🌐 Yurtdışı İngilizce Eğitim</li>
+                            <li class="mb-2">💰 Yaşam Maliyetleri</li>
+                            <li class="mb-2">📖 Yurtdışı Eğitim Rehberi</li>
+                            <li class="mb-2">✅ YÖK Denkliği</li>
+                            <li class="mb-2">🏆 İlk 1000 Üniversite</li>
+                            <li class="mb-2">📱 Uzaktan Eğitim</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Kariyer Robotu Section -->
+<div class="section mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Kariyer Robotu</h2>
+                <p class="lead">Soruları yanıtlamanız sadece bir kaç dakikanızı alacak.</p>
+                <p>Bu sayede, sizi daha iyi tanıyarak yurtdışındaki geleceğiniz ile ilgili <strong>ücretsiz</strong> ve <strong>nitelikli</strong> danışmanlık almanıza yardımcı olmak istiyoruz.</p>
+                <a href="#" class="btn btn-primary btn-lg mt-3">Hadi Başlayalım!</a>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='img/career-robot.svg') }}" alt="Kariyer Robotu" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tercih Edilen Bölümler -->
+<div class="section bg-light py-5 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Tercih Edilen Bölümler</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-stethoscope fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Tıp</h5>
+                        <p class="card-text">Sınavsız tıp eğitimi fırsatı</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Mühendislik</h5>
+                        <p class="card-text">Tüm mühendislik dalları</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">İşletme</h5>
+                        <p class="card-text">MBA ve işletme programları</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-palette fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Sanat</h5>
+                        <p class="card-text">Tasarım ve güzel sanatlar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="section text-center py-5">
+    <div class="container">
+        <h2>Hayalinizdeki Eğitim için İlk Adımı Atın</h2>
+        <p class="lead mb-4">Uzman danışmanlarımız size en uygun programı belirlemek için hazır</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Ücretsiz Danışmanlık Alın</a>
+    </div>
+</div>
+{% endblock %} 
