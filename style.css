@@ -79,11 +79,19 @@ nav {
 }
 
 /* Logo */
+.logo {
+    z-index: 101;
+}
+
 .logo img {
     height: 50px;
 }
 
 /* Contact Button */
+.contact {
+    z-index: 101;
+}
+
 .contact a {
     background: var(--accent-color);
     color: white;
@@ -96,6 +104,16 @@ nav {
 .contact a:hover {
     background: var(--primary-color);
     transform: translateY(-2px);
+}
+
+/* Hamburger Menu (Mobilde Görünür) */
+.menu-toggle {
+    display: none; /* Varsayılan olarak gizle */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 101;
 }
 
 /* Hero Section */
@@ -330,41 +348,25 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-    }
-
-    .logo {
-        flex: 1 1 100%;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .contact {
-        flex: 1 1 100%;
-        text-align: center;
-        margin-top: 1rem;
+    .menu-toggle {
+        display: block; /* Sadece mobilde göster */
     }
 
     .nav-links {
-        flex: 1 1 100%;
-        position: fixed;
-        top: 80px;
+        display: none; /* Mobilde başlangıçta gizli */
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
         background: white;
         padding: 1rem;
         box-shadow: var(--shadow-md);
-        transform: translateY(-100%);
-        transition: var(--transition);
-        display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 1.5rem;
     }
 
     .nav-links.active {
-        transform: translateY(0);
+        display: flex; /* Mobilde menü açılınca göster */
     }
 
     .hero h1 {
