@@ -78,6 +78,26 @@ nav {
     width: 100%;
 }
 
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Contact Button */
+.contact a {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact a:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
@@ -131,30 +151,28 @@ nav {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Footer Styles */
-footer {
-    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
-    color: white;
-    padding: 50px 0;
-    margin-top: 50px;
+/* University Cards */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 1rem;
 }
 
-.footer-content {
-    padding: 2rem 0;
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
-.footer-info h4,
-.footer-contact h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.footer-info p,
-.footer-contact p {
-    opacity: 0.9;
-}
-
-/* Yeni eklenen stiller */
 .university-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -169,11 +187,21 @@ footer {
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     position: relative;
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
 }
 
 .university-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+}
+
+.university-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.university-card:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
 .university-image {
@@ -265,75 +293,30 @@ footer {
     transform: translateX(4px);
 }
 
-/* Responsive Tasarım İyileştirmeleri */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .university-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 1rem;
-        box-shadow: var(--shadow-md);
-        transform: translateY(-100%);
-        transition: var(--transition);
-    }
-    
-    .nav-links.active {
-        transform: translateY(0);
-    }
-}
-
-/* Header İyileştirmeleri */
-.logo img {
-    height: 50px;
-}
-
-.contact a {
-    background: var(--accent-color);
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: var(--transition);
+    padding: 50px 0;
+    margin-top: 50px;
 }
 
-.contact a:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
+.footer-content {
+    padding: 2rem 0;
 }
 
-/* Üniversite Kartları */
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--text-color);
-    position: relative;
-    padding-bottom: 1rem;
+.footer-info h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 1rem;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary-color);
-    border-radius: 2px;
+.footer-info p,
+.footer-contact p {
+    opacity: 0.9;
 }
 
-/* Animasyonlar */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -345,15 +328,50 @@ footer {
     }
 }
 
-.university-card {
-    animation: fadeIn 0.6s ease-out forwards;
-    opacity: 0;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
 
-.university-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
+    .logo {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 
-.university-card:nth-child(3) {
-    animation-delay: 0.4s;
-} 
+    .contact {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-links {
+        flex: 1 1 100%;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-100%);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .university-grid {
+        grid-template-columns: 1fr;
+    }
+}
