@@ -1,50 +1,118 @@
-/* Hakkımızda Sayfası Özel Stilleri */
-.about-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/about-bg.jpg');
-    background-size: cover;
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft Eğitim - Hakkımızda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Draft Eğitim Logo"></a>
+            </div>
+            <button class="menu-toggle mobile-only">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
+                <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="contact">
+                <a href="tel:+38976427775"><i class="fas fa-phone"></i> +389 76 427 775</a>
+            </div>
+        </nav>
+    </header>
 
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>Hakkımızda</h1>
+                <p>Draft Eğitim olarak amacımız ve vizyonumuz</p>
+            </div>
+        </section>
 
-.about-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Misyonumuz -->
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Misyonumuz</h3>
+                        <p>Öğrencilere Makedonya'nın en iyi üniversitelerinde kaliteli eğitim alma fırsatı sunmak ve süreç boyunca profesyonel danışmanlık sağlamak.</p>
+                    </div>
 
-.about-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
+                    <!-- Vizyonumuz -->
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Vizyonumuz</h3>
+                        <p>Uluslararası eğitimde lider bir danışmanlık firması olarak, öğrencilerin geleceklerini şekillendirmelerine destek olmak.</p>
+                    </div>
 
-.about-details {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-top: 3rem;
-}
+                    <!-- Ekibimiz -->
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Ekibimiz</h3>
+                        <p>Alanında uzman eğitim danışmanları ve Makedonya'da eğitim tecrübesine sahip rehberlerden oluşan dinamik bir ekibiz.</p>
+                    </div>
+                </div>
 
-/* Footer */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
+                <!-- Detaylı Hakkımızda Metni -->
+                <div class="about-details">
+                    <h2>Biz Kimiz?</h2>
+                    <p>Draft Eğitim, 2020 yılında Makedonya'da eğitim almak isteyen öğrencilere rehberlik etmek amacıyla kuruldu. Bugüne kadar 500'den fazla öğrencinin Makedonya'nın önde gelen üniversitelerine yerleşmesini sağladık.</p>
+                    <p>Öğrencilerimize sadece kayıt sürecinde değil, eğitim hayatları boyunca destek oluyoruz. Vize işlemleri, konaklama, sosyal uyum ve akademik danışmanlık gibi hizmetlerimizle yanınızdayız.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.copyright {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-}
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Draft Eğitim Logo">
+                    <p>Makedonya'da eğitim almanın en güvenilir adresi.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Bağlantılar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Üsküp, Makedonya</p>
+                    <p><i class="fas fa-phone"></i> +389 76 427 775</p>
+                    <p><i class="fas fa-envelope"></i> info@draftegitim.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Draft Eğitim. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobil menü toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
