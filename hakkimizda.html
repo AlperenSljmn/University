@@ -3,76 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draft Eğitim - Hakkımızda</title>
+    <title>Bosfor Event Management - Biz Kimiz?</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Özel Stiller */
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .service-list {
+            columns: 2;
+            gap: 2rem;
+        }
+        .service-list li {
+            margin-bottom: 0.8rem;
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .service-list li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .check-list li:before {
+            content: "✓";
+            color: #27ae60;
+        }
+        @media (max-width: 768px) {
+            .service-list {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Draft Eğitim Logo"></a>
+                <a href="index.html"><img src="logo.png" alt="Bosfor Event Management Logo"></a>
             </div>
             <button class="menu-toggle mobile-only">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
-                <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                <li><a href="hakkimizda.html" class="active">Biz Kimiz?</a></li>
+                <li><a href="hizmetlerimiz.html">Hizmetler</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
             </ul>
             <div class="contact">
-                <a href="tel:+38976427775"><i class="fas fa-phone"></i> +389 76 427 775</a>
+                <a href="tel:+38912345678"><i class="fas fa-phone"></i> +389 12 345 678</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="about-hero">
+        <section class="hero">
             <div class="container">
-                <h1>Hakkımızda</h1>
-                <p>Draft Eğitim olarak amacımız ve vizyonumuz</p>
+                <h1 class="hero-title">Bosfor Event Management</h1>
+                <p class="subtitle">Hayallerinizi Avrupa'da Gerçeğe Dönüştüren Güvenilir Rehberiniz</p>
             </div>
         </section>
 
-        <section class="about-content">
+        <section class="about-section">
             <div class="container">
-                <div class="about-grid">
-                    <!-- Misyonumuz -->
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3>Misyonumuz</h3>
-                        <p>Öğrencilere Makedonya'nın en iyi üniversitelerinde kaliteli eğitim alma fırsatı sunmak ve süreç boyunca profesyonel danışmanlık sağlamak.</p>
-                    </div>
+                <div class="highlight-box">
+                    <p>Bosfor Event Management, Kuzey Makedonya'nın başkenti Üsküp'te kurulmuş, çok yönlü bir uluslararası danışmanlık ve etkinlik yönetimi firmasıdır. Ana hedefimiz; yurt dışına açılmak isteyen girişimciler, yatırımcılar ve bireyler için Makedonya'da güvenli, hızlı ve profesyonel çözümler sunmaktır.</p>
+                </div>
 
-                    <!-- Vizyonumuz -->
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Vizyonumuz</h3>
-                        <p>Uluslararası eğitimde lider bir danışmanlık firması olarak, öğrencilerin geleceklerini şekillendirmelerine destek olmak.</p>
+                <div class="mission-vision">
+                    <div class="card">
+                        <h2><i class="fas fa-bullseye"></i> Misyonumuz</h2>
+                        <p>Kuzey Makedonya başta olmak üzere Balkanlar'da, birey ve kurumlara doğru bilgi, güvenilir destek ve sürdürülebilir çözümler sunarak, onların Avrupa'daki hedeflerine ulaşmalarını sağlamak.</p>
                     </div>
-
-                    <!-- Ekibimiz -->
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Ekibimiz</h3>
-                        <p>Alanında uzman eğitim danışmanları ve Makedonya'da eğitim tecrübesine sahip rehberlerden oluşan dinamik bir ekibiz.</p>
+                    
+                    <div class="card">
+                        <h2><i class="fas fa-eye"></i> Vizyonumuz</h2>
+                        <p>Yurt dışı yaşam, eğitim ve yatırım danışmanlığı alanında Balkanlar'ın en güvenilir ve kapsamlı çözüm ortağı olmak. Müşterilerimizin başarılarını, kendi başarımız olarak görmek ve onların her adımında yanında olmak.</p>
                     </div>
                 </div>
 
-                <!-- Detaylı Hakkımızda Metni -->
-                <div class="about-details">
-                    <h2>Biz Kimiz?</h2>
-                    <p>Draft Eğitim, 2020 yılında Makedonya'da eğitim almak isteyen öğrencilere rehberlik etmek amacıyla kuruldu. Bugüne kadar 500'den fazla öğrencinin Makedonya'nın önde gelen üniversitelerine yerleşmesini sağladık.</p>
-                    <p>Öğrencilerimize sadece kayıt sürecinde değil, eğitim hayatları boyunca destek oluyoruz. Vize işlemleri, konaklama, sosyal uyum ve akademik danışmanlık gibi hizmetlerimizle yanınızdayız.</p>
+                <div class="services">
+                    <h2><i class="fas fa-list-check"></i> Hizmet Alanlarımız</h2>
+                    <ul class="service-list">
+                        <li><strong>Eğitim Danışmanlığı</strong>
+                            <ul>
+                                <li>Makedonya'daki devlet ve özel üniversitelere yerleştirme</li>
+                                <li>Dil okulları, hazırlık programları ve öğrenci vizesi desteği</li>
+                                <li>YÖK denkliği süreçleri hakkında bilgilendirme</li>
+                                <li>Konaklama, yaşam ve adaptasyon desteği</li>
+                            </ul>
+                        </li>
+                        <li><strong>Şirket Kuruluş Danışmanlığı</strong>
+                            <ul>
+                                <li>Makedonya'da şirket kuruluş işlemleri</li>
+                                <li>Vergi numarası, muhasebe ve resmi kayıt işlemleri</li>
+                                <li>Yerel danışmanlık ve işyeri adres temini</li>
+                                <li>Banka hesabı açma desteği</li>
+                            </ul>
+                        </li>
+                        <li><strong>Oturum İzni ve Göçmenlik Hizmetleri</strong>
+                            <ul>
+                                <li>Şirket sahibi olarak oturum izni alma işlemleri</li>
+                                <li>Aile birleşimi, öğrenci ve yatırımcı oturumları</li>
+                                <li>Tüm belgelerin hazırlanması ve Göçmenlik Ofisi başvuruları</li>
+                                <li>Sağlık sigortası ve yerleşim belgeleri desteği</li>
+                            </ul>
+                        </li>
+                        <li><strong>Makedonya Vatandaşlığı Danışmanlığı</strong>
+                            <ul>
+                                <li>Sürekli oturum sonrası vatandaşlık başvurusu</li>
+                                <li>Hızlandırılmış yatırım yoluyla vatandaşlık alma süreçleri</li>
+                                <li>Makedonca mülakat hazırlığı</li>
+                                <li>Belgelerin çeviri ve noter işlemleri</li>
+                            </ul>
+                        </li>
+                        <li><strong>Etkinlik ve Organizasyon Yönetimi</strong>
+                            <ul>
+                                <li>İş dünyası için networking, seminer, fuar organizasyonları</li>
+                                <li>Akademik ve kültürel etkinliklerin planlanması</li>
+                                <li>Yerel otoritelerle iletişim kurma ve resmi izin alma</li>
+                                <li>Makedonya'da Türk kültürünü tanıtan özel projeler</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="why-us">
+                    <h2><i class="fas fa-star"></i> Neden Bosfor Event Management?</h2>
+                    <ul class="check-list">
+                        <li><strong>Yerel Uzmanlık:</strong> Üsküp merkezli ofisimiz ve bölgesel bağlantılarımızla yerel tüm süreçlere hâkimiz.</li>
+                        <li><strong>Türkçe Destek:</strong> Tüm işlemlerinizde Türkçe danışmanlık alırsınız.</li>
+                        <li><strong>Yasal ve Şeffaf Hizmet:</strong> Her adımı belgelendirir, sizi bilgilendiririz.</li>
+                        <li><strong>7/24 Destek:</strong> Sürecin başından sonuna kadar yanınızdayız.</li>
+                        <li><strong>Kapsayıcı Hizmet:</strong> Oturum, şirket, eğitim, vatandaşlık, etkinlik - hepsi tek çatı altında.</li>
+                    </ul>
+                </div>
+
+                <div class="target-audience">
+                    <h2><i class="fas fa-users"></i> Kime Hitap Ediyoruz?</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <i class="fas fa-briefcase"></i>
+                            <p>Makedonya'da iş kurmak ve oturum izni almak isteyen girişimciler</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-family"></i>
+                            <p>Çocuklarını Avrupa'da okutmak isteyen aileler</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-user-tie"></i>
+                            <p>Avrupa yaşamına geçiş yapmak isteyen bireyler</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-building"></i>
+                            <p>Balkanlar'da etkinlik, kültür organizasyonu veya yatırım planlayan firmalar</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-passport"></i>
+                            <p>Çifte vatandaşlık almak isteyen Türkiye Cumhuriyeti vatandaşları</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <h2>Bosfor Event Management ile Avrupa'da Yeni Bir Sayfa Açın</h2>
+                    <p>Hayal ettiğiniz yurt dışı yaşamı planlıyoruz, yasal yollarla gerçekleştiriyoruz ve siz yerleşene kadar yanınızda oluyoruz.</p>
+                    <p>Bosfor Event Management olarak sadece bir danışman değil, Makedonya'daki yol arkadaşınız olmayı hedefliyoruz.</p>
+                    <a href="iletisim.html" class="btn">Hemen İletişime Geçin</a>
                 </div>
             </div>
         </section>
@@ -82,32 +192,22 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="Draft Eğitim Logo">
-                    <p>Makedonya'da eğitim almanın en güvenilir adresi.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Bağlantılar</h4>
-                    <ul>
-                        <li><a href="index.html">Ana Sayfa</a></li>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
-                        <li><a href="iletisim.html">İletişim</a></li>
-                    </ul>
+                    <img src="logo.png" alt="Bosfor Event Management Logo">
+                    <p>Hayallerinizi Avrupa'da gerçeğe dönüştürüyoruz.</p>
                 </div>
                 <div class="footer-contact">
                     <h4>İletişim</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Üsküp, Makedonya</p>
-                    <p><i class="fas fa-phone"></i> +389 76 427 775</p>
-                    <p><i class="fas fa-envelope"></i> info@draftegitim.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Üsküp, Kuzey Makedonya</p>
+                    <p><i class="fas fa-phone"></i> +389 12 345 678</p>
+                    <p><i class="fas fa-envelope"></i> info@bosforevent.com</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Draft Eğitim. Tüm hakları saklıdır.</p>
+                <p>&copy; 2024 Bosfor Event Management. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         // Mobil menü toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
