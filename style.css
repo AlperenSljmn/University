@@ -475,3 +475,13 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.whatsapp-number {
+    color: #25D366; /* WhatsApp yeşili */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.whatsapp-number:hover {
+    text-decoration: underline;
+}
+
